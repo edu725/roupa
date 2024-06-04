@@ -52,3 +52,15 @@ def delete(request, id):
     item.delete()
     messages.success(request, 'item foi deletada com sucesso!')
     return redirect('index')
+
+def cart_create(request):
+    id_user= 1
+    cart = Cart(user = id_user)
+    cart.save()
+
+def add_cart(request):
+    id_user = 1
+    cart =Cart.Object.get(user = id_user)
+    quantidade = 1
+    add = CartItem(product = id, quantity = quantidade, cart = cart.id)
+    add.save()
