@@ -1,14 +1,16 @@
 {% load static %}
 {% for item in itens %}
-<div class="col-xl-3 col-lg-4 col-md-6">
-    <div class="gallery-item h-100">
-        <img src="{{ item.path.url }}" class="img-fluid" alt="{{ item.name }}">
-        <div class="gallery-links d-flex align-items-center justify-content-center">
-            <strong>{{item.name}}</strong> 
-            <strong>{{item.price}}</strong> 
-            <strong>{{item.descript}}</strong>
-            <a href="{% url 'visualizar_item' item.id %}" class="btn btn-primary">Visualizar</a>
+<div class="col-lg-4 ">
+    <div class="card gallery-item h-100" style="width: 18rem;">
+        <img src="{{ item.path.url }}" class="img-fluid card-img-top" alt="{{ item.name }}">
+        <div class="card-body text-center">
+          <h1 class="card-title"><strong>{{item.name}}</strong></h1>
+          <b><strong>Preço: {{item.price}}</strong></b>
+          <p class="card-text"><strong>{{item.descript}}</strong></p>
         </div>
     </div>
 </div>
 {% endfor %}
+
+
+
