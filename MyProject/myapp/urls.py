@@ -9,5 +9,6 @@ urlpatterns = [
     path("itens/editar/<int:id>", edit, name="editar_item"),
     path("itens/atualizar/<int:id>", update, name="atualizar_item"),
     path("itens/visualizar/<int:id>", read, name="visualizar_item"),
-    path("itens/deletar/<int:id>", delete, name="deletar_item")
+    path("itens/deletar/<int:id>", delete, name="deletar_item"),
+    path("itens/carrinho", cart, name= "carrinho_item")
 ]

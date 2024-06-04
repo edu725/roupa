@@ -8,6 +8,7 @@
           <b><strong>Preço: R${{item.price}}</strong></b>
           <p class="card-text"><strong>{{item.descript}}</strong></p>
           <a href="{% url 'visualizar_item' item.id %}" class="btn btn-primary">Visualizar</a>
+          <a href="{% url 'carrinho_item' %}" class="btn btn-primary">Adicionar ao carrinho</a>
         </div>
     </div>
 </div>
